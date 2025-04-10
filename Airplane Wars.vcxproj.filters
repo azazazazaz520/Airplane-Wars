@@ -18,5 +18,22 @@
     <ClCompile Include="Airplane Wars.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Myplane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bullet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Welcome.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Myplane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

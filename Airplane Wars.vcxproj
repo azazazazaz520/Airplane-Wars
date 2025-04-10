@@ -128,6 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Airplane Wars.cpp" />
+    <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="Myplane.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bullet.h" />
+    <ClInclude Include="Myplane.h" />
+    <ClInclude Include="Welcome.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
