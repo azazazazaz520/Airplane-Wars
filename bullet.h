@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <windows.h>
+#include "Cursor.h"
 struct bullet
 {
 	static std::vector <bullet> bullets;
@@ -10,7 +11,6 @@ struct bullet
 	static void add_bullet(int x,int y);         //添加子弹
 	static void update();       //移动每个子弹的位置
 	static void display();
-	static void gotoXY(int x, int y);
 	int bullet_x;
 	int bullet_y;
 };

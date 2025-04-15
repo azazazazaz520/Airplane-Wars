@@ -24,6 +24,12 @@
     <ClCompile Include="bullet.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Plane_info.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Welcome.h">
@@ -33,6 +39,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="bullet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane_info.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

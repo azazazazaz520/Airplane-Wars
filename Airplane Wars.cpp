@@ -3,11 +3,16 @@
 #include <windows.h>
 #include "Welcome.h"
 #include "Myplane.h"
+#include "Cursor.h"
+
 int main()
 {
 	//SetConsoleOutputCP(65001); // 设置控制台为UTF-8编码
+	srand(time(0));
 	welcome();
+	HideCursor();         //隐藏光标
 	Myplane myplane;
+
 	myplane.begin();
-	system("pause");
+	
 }

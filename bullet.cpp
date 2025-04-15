@@ -19,20 +19,9 @@ void bullet::add_bullet(int x, int y)
 
 void bullet::update()
 {
-	/*for (int i = 0; i < bullets.size(); i++)
-	{
-		bullets[i].move_bullet();
-	}
-	for (int i = bullets.size() - 1; i >= 0; i--)
-	{
-		if (bullets[i].bullet_y <= 0)
-		{
-			bullets.erase(bullets.begin()+ i);
-		}
-	}*/
 	for (auto& b : bullets) b.move_bullet();
 	bullets.erase(std::remove_if(bullets.begin(), bullets.end(),
-		[](const bullet& b) { return b.bullet_y <= 0; }), bullets.end());
+		[](const bullet& b) { return b.bullet_y <= 0; }), bullets.end());  //Lambda 表达式
 }
 void bullet::display()
 {
@@ -67,12 +56,3 @@ void bullet::display()
         
     }
 }
-
-void bullet::gotoXY(int x, int y)       //光标移动函数
-{
-	COORD pos = { x, y };
-	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE); // 获取标准输出设备句柄  
-	SetConsoleCursorPosition(hOut, pos); // 两参数分别是指定哪个窗体，具体位置  
-}
-
-

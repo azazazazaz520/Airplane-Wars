@@ -130,11 +130,17 @@
     <ClCompile Include="Airplane Wars.cpp" />
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="Myplane.cpp" />
+    <ClCompile Include="Plane_info.cpp" />
+    <ClCompile Include="Enemy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bullet.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Myplane.h" />
+    <ClInclude Include="Plane_info.h" />
     <ClInclude Include="Welcome.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
