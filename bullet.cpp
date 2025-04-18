@@ -25,7 +25,8 @@ void bullet::update()
 }
 void bullet::display()
 {
-    for (auto& b : bullets) {
+	
+	for (auto& b : bullets) {
         // Çå³ý¾ÉÎ»ÖÃ
 		for (int i = 0; i < b.bullets.size(); i++)
 		{

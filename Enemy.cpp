@@ -81,8 +81,6 @@ void SEnemy::display() const
 		cout << "   "; 
 		gotoXY(e.enemy_x - 2, e.enemy_y + 2);
 		cout << "   ";
-		/*gotoXY(e.enemy_x - 2, e.enemy_y - 2);
-		cout << "   ";*/
 
 		/*刷新敌人图标*/
 		if (e.enemy_y <= 24)
@@ -98,5 +96,19 @@ void SEnemy::display() const
 		cout << string(100, ' '); // 清除整个底部行
 		gotoXY(0, 25);
 		cout << string(100, ' '); // 清除整个底部行
+	}
+}
+
+
+
+bool SEnemy::isExist(int x,int y) const
+{
+	if (x == enemy_x && y == enemy_y)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }

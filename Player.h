@@ -10,10 +10,18 @@
 class Player 
 {
 private:
+	
 	SEnemy enemy;
 	Myplane myplane;
+
+	int plane_x ;
+	int plane_y ;
+	int myscore;
 
 public:
 	Player();
 	void Maingame();
+	void onCollision(const bullet& b);
+	void score();
+	
 };
