@@ -132,6 +132,7 @@
     <ClCompile Include="Myplane.cpp" />
     <ClCompile Include="Plane_info.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bullet.h" />
@@ -141,6 +142,7 @@
     <ClInclude Include="Welcome.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

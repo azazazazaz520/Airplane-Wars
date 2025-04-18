@@ -2,7 +2,7 @@
 #include <conio.h> // _kbhit(), _getch()
 #include <windows.h>
 #include "Welcome.h"
-#include "Myplane.h"
+#include "Player.h"
 #include "Cursor.h"
 
 int main()
@@ -11,8 +11,9 @@ int main()
 	srand(time(0));
 	welcome();
 	HideCursor();         //隐藏光标
-	Myplane myplane;
+	Player player;
+	player.Maingame();
 
-	myplane.begin();
+	
 	
 }

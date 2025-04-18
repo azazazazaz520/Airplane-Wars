@@ -5,37 +5,6 @@ Myplane::Myplane() : plane_x(25), plane_y(15)         //初始化飞机位置
   
 }  
 
-void Myplane::begin()           
-{  
-  gotoXY(plane_x, plane_y);  
-  bullet _bullet(plane_x, plane_y);
-
-  char flag;
-  while (true)
-  {
-      Sleep(30);
-      
-      if (_kbhit())
-      {
-          flag = _getch();
-          update(flag);
-      }        
-      
-      
-
-      _bullet.add_bullet(plane_x, plane_y);
-      _bullet.update();
-      _bullet.display();
-
-     
-      enemy.update();
-      enemy.display();
-
-
-      display();
-  }
-}  
-
 void Myplane::display() const
 {
   static int last_x = plane_x, last_y = plane_y;

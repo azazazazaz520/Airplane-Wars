@@ -3,7 +3,7 @@
 #include "Cursor.h"
 SEnemy::SEnemy()
 {
-	this->Create_time = 0;
+	nCreateTime = 0;
 	Move_time = 0;
 	enemy_x = 0;
 	enemy_y = 0;
@@ -12,10 +12,10 @@ SEnemy::SEnemy()
 }
 void SEnemy::update()
 {
-	//Sleep(50);
-	if (vecEnemy.size() < 10)
+	nCreateTime++;
+	if (nCreateTime >= 20 && vecEnemy.size() < 10)
 	{
-		//Create_time = 0;          //创建敌人有时间间隔
+		nCreateTime = 0;          //创建敌人有时间间隔
 		add_enemy();
 	}
 
@@ -58,7 +58,10 @@ void SEnemy::add_enemy()
 
 void SEnemy::Move_Enemy()
 {
-	if (enemy_y < 24) {
+	nMoveTime++;
+	if (nMoveTime > 5)
+	{
+		nMoveTime = 0;
 		enemy_y++; // 敌人向下移动
 	}
 	
@@ -78,8 +81,8 @@ void SEnemy::display() const
 		cout << "   "; 
 		gotoXY(e.enemy_x - 2, e.enemy_y + 2);
 		cout << "   ";
-		gotoXY(e.enemy_x - 2, e.enemy_y - 2);
-		cout << "   ";
+		/*gotoXY(e.enemy_x - 2, e.enemy_y - 2);
+		cout << "   ";*/
 
 		/*刷新敌人图标*/
 		if (e.enemy_y <= 24)

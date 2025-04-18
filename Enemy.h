@@ -4,13 +4,15 @@
 #include <string>
 class SEnemy {
 private:
-	int Create_time;     //
+	int nCreateTime;
 	int Move_time;		 //
 	int enemy_x;         //横坐标
 	int enemy_y;         //纵坐标
 	std::vector<SEnemy> vecEnemy;          //存放敌人的vector数组
 	std::string line_1;
 	std::string line_2;
+
+	int nMoveTime;
 
 public:
 	SEnemy();
