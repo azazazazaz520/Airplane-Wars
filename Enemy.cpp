@@ -4,6 +4,7 @@
 SEnemy::SEnemy()
 {
 	nCreateTime = 0;
+	nMoveTime = 0;
 	Move_time = 0;
 	enemy_x = 0;
 	enemy_y = 0;
@@ -41,7 +42,7 @@ void SEnemy::add_enemy()
 	bool valid_position = false;
 	while (!valid_position)
 	{
-		rad_enemy_x = rand() % 78;           //随机敌人x坐标
+		rad_enemy_x = rand() % 78 + 2;           //随机敌人x坐标
 		valid_position = true;
 		for (const auto& e : vecEnemy)
 		{
@@ -52,7 +53,7 @@ void SEnemy::add_enemy()
 			}
 		}
 	}
-	Enemy.init_enemy_date(rad_enemy_x, 0);   
+	Enemy.init_enemy_date(rad_enemy_x, 2);   
 	vecEnemy.push_back(Enemy);
 }
 
@@ -71,31 +72,29 @@ void SEnemy::display() const
 	for (auto& e : vecEnemy)
 	{
 		/*清除上一次移动前敌人的图标*/
-		if (e.enemy_y > 24 || e.enemy_y < 0)
-			continue;
-		gotoXY(e.enemy_x - 2, e.enemy_y);
-		cout << "   ";
-		gotoXY(e.enemy_x - 2, e.enemy_y - 1);
-		cout << "   ";
-		gotoXY(e.enemy_x - 2, e.enemy_y + 1);
-		cout << "   "; 
-		gotoXY(e.enemy_x - 2, e.enemy_y + 2);
-		cout << "   ";
+		/*if (e.enemy_y > 24 || e.enemy_y < 0)
+			continue;*/
+		if (e.enemy_y - 1 >= 0) {
+			gotoXY(e.enemy_x - 2, e.enemy_y - 1);
+			std::cout << "   ";  // line_1 (上次位置)
+			gotoXY(e.enemy_x - 1, e.enemy_y);
+			std::cout << "   ";  // line_2 (上次位置)
+		}
 
 		/*刷新敌人图标*/
-		if (e.enemy_y <= 24)
+		if (e.enemy_y <= 22)
 		{
 			gotoXY(e.enemy_x - 2, e.enemy_y);
 			cout << line_1;
 			gotoXY(e.enemy_x - 1, e.enemy_y + 1);
 			cout << line_2;
 		}
-		gotoXY(0, 23);
-		cout << string(100, ' '); // 清除整个底部行
-		gotoXY(0, 24);
-		cout << string(100, ' '); // 清除整个底部行
-		gotoXY(0, 25);
-		cout << string(100, ' '); // 清除整个底部行
+		//gotoXY(0, 23);
+		//cout << string(100, ' '); // 清除整个底部行
+		//gotoXY(0, 24);
+		//cout << string(100, ' '); // 清除整个底部行
+		//gotoXY(0, 25);
+		//cout << string(100, ' '); // 清除整个底部行
 	}
 }
 

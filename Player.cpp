@@ -55,7 +55,7 @@ void Player::Maingame()
     char flag;
     while (true)
     {
-        Sleep(20);
+        Sleep(16);
         plane_x = myplane.Getx();
         plane_y = myplane.Gety();
         if (_kbhit())

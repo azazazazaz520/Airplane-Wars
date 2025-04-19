@@ -19,14 +19,14 @@ void Myplane::display() const
   gotoXY(last_x - 4, last_y + 3);
   std::cout << "        ";
 
-
-  gotoXY(last_x - 2, last_y);
-  Player_plane_1.display1();
-  gotoXY(last_x - 2, last_y + 1);
-  Player_plane_1.display2();
-  gotoXY(last_x - 2, last_y + 2);
-  Player_plane_1.display3();
-  
+  if (plane_x >= 0 && plane_y >= 0) {
+      gotoXY(last_x - 2, last_y);
+      Player_plane_1.display1();
+      gotoXY(last_x - 2, last_y + 1);
+      Player_plane_1.display2();
+      gotoXY(last_x - 2, last_y + 2);
+      Player_plane_1.display3();
+  }
   last_x = plane_x;
   last_y = plane_y;
 }
